@@ -10,7 +10,7 @@ services:
         class: %kreta_time_entry.event_listener.time_entry_if_allowed_annotation.class%
         arguments:
             - @annotations.reader
-            - @security.context
+            - @security.token_storage
             - @kreta_time_tracking.repository.time_entry
         tags:
             - { name: kernel.event_listener, event: kernel.controller, method: onResourceIfAllowedAnnotationMethod }
