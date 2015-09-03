@@ -4,11 +4,11 @@
 [![Build Status](https://travis-ci.org/kreta-plugins/TimeTrackingBundle.svg?branch=master)](https://travis-ci.org/kreta-plugins/TimeTrackingBundle)
 [![Coverage Status](https://img.shields.io/coveralls/kreta-plugins/TimeTrackingBundle.svg)](https://coveralls.io/r/kreta-plugins/TimeTrackingBundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kreta-plugins/TimeTrackingBundle/badges/quality-sTimeTrackingBundle.png?b=master)](https://scrutinizer-ci.com/g/kreta-plugins/TimeTrackingBundle/?branch=master)
-[![HHVM Status](http://hhvm.h4cc.de/badge/kreta-plugins/time-tracking-bundle.svg)](http://hhvm.h4cc.de/package/kreta-plugins/time-tracking-bundle)
-[![Total Downloads](https://poser.pugx.org/kreta-plugins/time-tracking-bundle/downloads)](https://packagist.org/packages/kreta-plugins/time-tracking-bundle)
+[![HHVM Status](http://hhvm.h4cc.de/badge/kreta/time-tracking-bundle.svg)](http://hhvm.h4cc.de/package/kreta/time-tracking-bundle)
+[![Total Downloads](https://poser.pugx.org/kreta/time-tracking-bundle/downloads)](https://packagist.org/packages/kreta/time-tracking-bundle)
 
-[![Latest Stable Version](https://poser.pugx.org/kreta-plugins/time-tracking-bundle/v/stable.svg)](https://packagist.org/packages/kreta-plugins/time-tracking-bundle)
-[![Latest Unstable Version](https://poser.pugx.org/kreta-plugins/time-tracking-bundle/v/unstable.svg)](https://packagist.org/packages/kreta-plugins/time-tracking-bundle)
+[![Latest Stable Version](https://poser.pugx.org/kreta/time-tracking-bundle/v/stable.svg)](https://packagist.org/packages/kreta/time-tracking-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/kreta/time-tracking-bundle/v/unstable.svg)](https://packagist.org/packages/kreta/time-tracking-bundle)
 
 Tests
 -----
@@ -56,4 +56,4 @@ Kreta Time Tracking Bundle is created by:
 
 Licensing Options
 -----------------
-[![License](https://poser.pugx.org/kreta-plugins/Time Tracking/license.svg)](https://github.com/kreta/kreta/blob/master/LICENSE)
+[![License](https://poser.pugx.org/kreta/time-tracking-bundle/license.svg)](https://github.com/kreta/kreta/blob/master/LICENSE)
