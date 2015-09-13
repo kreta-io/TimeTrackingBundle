@@ -74,7 +74,7 @@ Feature: Manage time entry
 
   Scenario: Getting all the time entries of issue 0
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries"
+    When I send a GET request to "/api/issues/0/time-entries"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -85,13 +85,13 @@ Feature: Manage time entry
         "time_spent": 200,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/3"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/3"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -101,13 +101,13 @@ Feature: Manage time entry
         "time_spent": 3000,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/2"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/2"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -117,13 +117,13 @@ Feature: Manage time entry
         "time_spent": 90,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/0"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/0"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -133,13 +133,13 @@ Feature: Manage time entry
         "time_spent": 100,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/4"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/4"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }]
@@ -147,7 +147,7 @@ Feature: Manage time entry
 
   Scenario: Getting all the time entries of issue 0 order by time spent
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries?sort=time_spent"
+    When I send a GET request to "/api/issues/0/time-entries?sort=time_spent"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -158,13 +158,13 @@ Feature: Manage time entry
         "time_spent": 200,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/3"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/3"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -174,13 +174,13 @@ Feature: Manage time entry
         "time_spent": 3000,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/2"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/2"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -190,13 +190,13 @@ Feature: Manage time entry
         "time_spent": 90,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/0"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/0"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -206,13 +206,13 @@ Feature: Manage time entry
         "time_spent": 100,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/4"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/4"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }]
@@ -220,7 +220,7 @@ Feature: Manage time entry
 
   Scenario: Getting all the time entries of issue 0 with limit 2
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries?limit=2"
+    When I send a GET request to "/api/issues/0/time-entries?limit=2"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -231,13 +231,13 @@ Feature: Manage time entry
         "time_spent": 200,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/3"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/3"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -247,13 +247,13 @@ Feature: Manage time entry
         "time_spent": 3000,
         "_links": {
           "self": {
-            "href":"http://localhost/app_test.php/api/issues/0/time-entries/2"
+            "href":"http://kreta.test:8000/api/issues/0/time-entries/2"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues":{
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }]
@@ -261,7 +261,7 @@ Feature: Manage time entry
 
   Scenario: Getting all the time entries of issue 0 with offset 2
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries?offset=2"
+    When I send a GET request to "/api/issues/0/time-entries?offset=2"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -272,13 +272,13 @@ Feature: Manage time entry
         "time_spent": 90,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/0"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/0"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }, {
@@ -288,13 +288,13 @@ Feature: Manage time entry
         "time_spent": 100,
         "_links": {
           "self": {
-            "href":"http://localhost/app_test.php/api/issues/0/time-entries/4"
+            "href":"http://kreta.test:8000/api/issues/0/time-entries/4"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }]
@@ -302,7 +302,7 @@ Feature: Manage time entry
 
   Scenario: Getting all the time entries with user which is not a project participant
     Given I am authenticating with "access-token-3" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries"
+    When I send a GET request to "/api/issues/0/time-entries"
     Then the response code should be 403
     And the response should contain json:
     """
@@ -313,7 +313,7 @@ Feature: Manage time entry
 
   Scenario: Getting all the time entries of unknown issue
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/unknown-issue/time-entries"
+    When I send a GET request to "/api/issues/unknown-issue/time-entries"
     Then the response code should be 404
     And the response should contain json:
     """
@@ -324,7 +324,7 @@ Feature: Manage time entry
 
   Scenario: Getting the 0 time entry
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries/0"
+    When I send a GET request to "/api/issues/0/time-entries/0"
     Then the response code should be 200
     And the response should contain json:
     """
@@ -335,13 +335,13 @@ Feature: Manage time entry
         "time_spent": 90,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/0"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/0"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }
@@ -349,7 +349,7 @@ Feature: Manage time entry
 
   Scenario: Getting the 0 time entry with user that is not allowed
     Given I am authenticating with "access-token-3" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries/2"
+    When I send a GET request to "/api/issues/0/time-entries/2"
     Then the response code should be 403
     And the response should contain json:
     """
@@ -360,7 +360,7 @@ Feature: Manage time entry
 
   Scenario: Getting the 0 time entries of unknown issue
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/unknown-issue/time-entries/0"
+    When I send a GET request to "/api/issues/unknown-issue/time-entries/0"
     Then the response code should be 404
     And the response should contain json:
     """
@@ -371,7 +371,7 @@ Feature: Manage time entry
 
   Scenario: Getting the unknown time entry
     Given I am authenticating with "access-token-0" token
-    When I send a GET request to "/app_test.php/api/issues/0/time-entries/unknown-time-entry"
+    When I send a GET request to "/api/issues/0/time-entries/unknown-time-entry"
     Then the response code should be 404
     And the response should contain json:
     """
@@ -383,7 +383,7 @@ Feature: Manage time entry
   Scenario: Creating a time entry
     Given I am authenticating with "access-token-0" token
     Given I set header "content-type" with value "application/json"
-    When I send a POST request to "/app_test.php/api/issues/0/time-entries" with body:
+    When I send a POST request to "/api/issues/0/time-entries" with body:
     """
       {
         "description": "The description",
@@ -395,7 +395,7 @@ Feature: Manage time entry
   Scenario: Creating a time entry without parameters
     Given I am authenticating with "access-token-0" token
     Given I set header "content-type" with value "application/json"
-    When I send a POST request to "/app_test.php/api/issues/0/time-entries" with body:
+    When I send a POST request to "/api/issues/0/time-entries" with body:
     """
       {
       }
@@ -412,7 +412,7 @@ Feature: Manage time entry
   Scenario: Creating a time entry without required parameters
     Given I am authenticating with "access-token-0" token
     Given I set header "content-type" with value "application/json"
-    When I send a POST request to "/app_test.php/api/issues/0/time-entries" with body:
+    When I send a POST request to "/api/issues/0/time-entries" with body:
     """
       {
         "description": "The description"
@@ -431,7 +431,7 @@ Feature: Manage time entry
   Scenario: Creating an time entry with user which is not a participant
     Given I am authenticating with "access-token-2" token
     Given I set header "content-type" with value "application/json"
-    When I send a POST request to "/app_test.php/api/issues/0/time-entries" with body:
+    When I send a POST request to "/api/issues/0/time-entries" with body:
     """
       {
         "description": "The description",
@@ -449,7 +449,7 @@ Feature: Manage time entry
   Scenario: Updating the 0 time entry
     Given I am authenticating with "access-token-0" token
     Given I set header "content-type" with value "application/json"
-    When I send a PUT request to "/app_test.php/api/issues/0/time-entries/0" with body:
+    When I send a PUT request to "/api/issues/0/time-entries/0" with body:
     """
       {
         "description": "New description",
@@ -466,13 +466,13 @@ Feature: Manage time entry
         "time_spent": 3,
         "_links": {
           "self": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries/0"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries/0"
           },
           "timeEntries": {
-            "href": "http://localhost/app_test.php/api/issues/0/time-entries"
+            "href": "http://kreta.test:8000/api/issues/0/time-entries"
           },
           "issues": {
-            "href": "http://localhost/app_test.php/api/issues"
+            "href": "http://kreta.test:8000/api/issues"
           }
         }
       }
@@ -481,7 +481,7 @@ Feature: Manage time entry
   Scenario: Updating the 0 time entry without parameters
     Given I am authenticating with "access-token-0" token
     Given I set header "content-type" with value "application/json"
-    When I send a PUT request to "/app_test.php/api/issues/0/time-entries/0" with body:
+    When I send a PUT request to "/api/issues/0/time-entries/0" with body:
     """
       {
       }
@@ -498,7 +498,7 @@ Feature: Manage time entry
   Scenario: Updating the 0 time entry without required parameters
     Given I am authenticating with "access-token-0" token
     Given I set header "content-type" with value "application/json"
-    When I send a PUT request to "/app_test.php/api/issues/0/time-entries/0" with body:
+    When I send a PUT request to "/api/issues/0/time-entries/0" with body:
     """
       {
         "description": "The description"
@@ -517,7 +517,7 @@ Feature: Manage time entry
   Scenario: Updating the 1 time entry with user which is participant
     Given I am authenticating with "access-token-2" token
     Given I set header "content-type" with value "application/json"
-    When I send a PUT request to "/app_test.php/api/issues/0/time-entries/1" with body:
+    When I send a PUT request to "/api/issues/0/time-entries/1" with body:
     """
       {
         "description": "The description",
@@ -534,7 +534,7 @@ Feature: Manage time entry
 
   Scenario: Deleting the 0 time entry with user which is participant
     Given I am authenticating with "access-token-2" token
-    When I send a DELETE request to "/app_test.php/api/issues/0/time-entries/1"
+    When I send a DELETE request to "/api/issues/0/time-entries/1"
     Then the response code should be 403
     And the response should contain json:
     """
@@ -545,7 +545,7 @@ Feature: Manage time entry
 
   Scenario: Deleting the 0 time entry of unknown issue
     Given I am authenticating with "access-token-0" token
-    When I send a DELETE request to "/app_test.php/api/issues/unknown-issue/time-entries/1"
+    When I send a DELETE request to "/api/issues/unknown-issue/time-entries/1"
     Then the response code should be 404
     And the response should contain json:
     """
@@ -556,7 +556,7 @@ Feature: Manage time entry
 
   Scenario: Deleting the unknown time entry
     Given I am authenticating with "access-token-0" token
-    When I send a DELETE request to "/app_test.php/api/issues/0/time-entries/unknown-time-entry"
+    When I send a DELETE request to "/api/issues/0/time-entries/unknown-time-entry"
     Then the response code should be 404
     And the response should contain json:
     """
@@ -567,7 +567,7 @@ Feature: Manage time entry
 
   Scenario: Deleting the 0 time entry
     Given I am authenticating with "access-token-0" token
-    When I send a DELETE request to "/app_test.php/api/issues/0/time-entries/0"
+    When I send a DELETE request to "/api/issues/0/time-entries/0"
     Then the response code should be 204
     And the response should contain json:
     """
