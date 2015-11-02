@@ -3,7 +3,7 @@
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/920b3161-137d-41b5-a886-b982fab1ef95/mini.png)](https://insight.sensiolabs.com/projects/920b3161-137d-41b5-a886-b982fab1ef95)
 [![Build Status](https://travis-ci.org/kreta-plugins/TimeTrackingBundle.svg?branch=master)](https://travis-ci.org/kreta-plugins/TimeTrackingBundle)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kreta-plugins/TimeTrackingBundle/badges/quality-sTimeTrackingBundle.png?b=master)](https://scrutinizer-ci.com/g/kreta-plugins/TimeTrackingBundle/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kreta-plugins/TimeTrackingBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kreta-plugins/TimeTrackingBundle/?branch=master)
 [![Total Downloads](https://poser.pugx.org/kreta/time-tracking-bundle/downloads)](https://packagist.org/packages/kreta/time-tracking-bundle)
 [![Latest Stable Version](https://poser.pugx.org/kreta/time-tracking-bundle/v/stable.svg)](https://packagist.org/packages/kreta/time-tracking-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/kreta/time-tracking-bundle/v/unstable.svg)](https://packagist.org/packages/kreta/time-tracking-bundle)
