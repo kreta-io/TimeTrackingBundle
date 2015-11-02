@@ -1,28 +1,26 @@
 <?php
 
 /*
- * This file belongs to Kreta.
- * The source code of application includes a LICENSE file
- * with all information about license.
+ * This file is part of the Kreta package.
  *
- * @author benatespina <benatespina@gmail.com>
- * @author gorkalaucirica <gorka.lauzirika@gmail.com>
+ * (c) Beñat Espiña <benatespina@gmail.com>
+ * (c) Gorka Laucirica <gorka.lauzirika@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace spec\Kreta\Bundle\TimeTrackingBundle\Security\Authorization\Voter;
 
+use Kreta\Component\Issue\Model\Issue;
 use Kreta\Component\Project\Model\Interfaces\ProjectInterface;
 use Kreta\Component\TimeTracking\Model\TimeEntry;
 use Kreta\Component\User\Model\Interfaces\UserInterface;
-use Kreta\Component\Issue\Model\Issue;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 
 /**
  * Class TimeEntryVoterSpec.
- *
- * @package spec\Kreta\Bundle\TimeTrackingBundle\Security\Authorization\Voter
  */
 class TimeEntryVoterSpec extends ObjectBehavior
 {
@@ -80,8 +78,7 @@ class TimeEntryVoterSpec extends ObjectBehavior
     function it_does_not_vote_because_the_current_user_is_not_user_interface_instance(
         TokenInterface $token,
         TimeEntry $timeEntry
-    )
-    {
+    ) {
         $token->getUser()->shouldBeCalled()->willReturn(null);
 
         $this->vote($token, $timeEntry, ['create'])->shouldReturn(-1);
@@ -93,8 +90,7 @@ class TimeEntryVoterSpec extends ObjectBehavior
         Issue $issue,
         UserInterface $user,
         ProjectInterface $project
-    )
-    {
+    ) {
         $token->getUser()->shouldBeCalled()->willReturn($user);
         $timeEntry->getIssue()->shouldBeCalled()->willReturn($issue);
         $issue->getProject()->shouldBeCalled()->willReturn($project);
@@ -120,8 +116,7 @@ class TimeEntryVoterSpec extends ObjectBehavior
         Issue $issue,
         UserInterface $user,
         ProjectInterface $project
-    )
-    {
+    ) {
         $token->getUser()->shouldBeCalled()->willReturn($user);
         $timeEntry->getIssue()->shouldBeCalled()->willReturn($issue);
         $issue->getProject()->shouldBeCalled()->willReturn($project);
@@ -138,8 +133,7 @@ class TimeEntryVoterSpec extends ObjectBehavior
         Issue $issue,
         UserInterface $user,
         ProjectInterface $project
-    )
-    {
+    ) {
         $token->getUser()->shouldBeCalled()->willReturn($user);
         $timeEntry->getIssue()->shouldBeCalled()->willReturn($issue);
         $issue->getProject()->shouldBeCalled()->willReturn($project);
@@ -156,8 +150,7 @@ class TimeEntryVoterSpec extends ObjectBehavior
         Issue $issue,
         UserInterface $user,
         ProjectInterface $project
-    )
-    {
+    ) {
         $token->getUser()->shouldBeCalled()->willReturn($user);
         $timeEntry->getIssue()->shouldBeCalled()->willReturn($issue);
         $issue->getProject()->shouldBeCalled()->willReturn($project);

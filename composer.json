@@ -1,10 +1,17 @@
 {
     "name": "kreta/time-tracking-bundle",
     "description": "Kreta time tracking bundle",
-    "keywords": ["project", "management", "development", "tool", "time tracking", "bundle"],
+    "keywords": [
+        "project",
+        "management",
+        "development",
+        "tool",
+        "time tracking",
+        "bundle"
+    ],
     "homepage": "http://kreta.io",
     "license": "MIT",
-    "type": "library",
+    "type": "symfony-bundle",
     "authors": [
         {
             "name": "Beñat Espiña Diaz",
@@ -18,36 +25,48 @@
         }
     ],
     "require": {
-        "php":                                 ">=5.4",
-
-        "kreta/core-bundle":                   "~0.3.0",
-        "kreta/time-tracking":                 "~0.3.0"
+        "php":                   ">=5.4",
+        "kreta/core-bundle":     "^0.4.0",
+        "kreta/time-tracking":   "^0.4.0"
     },
     "require-dev": {
-        "phpspec/phpspec":                     "~2.2",
-        "henrikbjorn/phpspec-code-coverage":   "~1.0",
-        "satooshi/php-coveralls":              "~0.6,>=0.6.2",
-        "squizlabs/php_codesniffer":           "~1.0",
-        "phpmd/phpmd":                         "~2.1"
+        "fabpot/php-cs-fixer":    "^1.10",
+        "mmoreram/php-formatter": "^1.0",
+        "phpspec/phpspec":        "^2.3"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/kreta/php-coveralls"
+            "url": "https://github.com/kreta/FOSUserBundle"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kreta/Finite"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kreta/FOSOAuthServerBundle"
         }
     ],
+    "scripts": {
+        "cs": [
+            "php-cs-fixer fix --config-file=.php_cs",
+            "php-cs-fixer fix --config-file=.phpspec_cs",
+            "php-formatter f:h:f src",
+            "php-formatter f:h:f spec",
+            "php-formatter f:u:s src",
+            "php-formatter f:u:s spec"
+        ],
+        "test": "phpspec run"
+    },
     "autoload": {
-        "psr-4": { "Kreta\\Bundle\\TimeTrackingBundle\\": "" }
+        "psr-4": {
+            "Kreta\\Bundle\\TimeTrackingBundle\\": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "Kreta\\Bundle\\TimeTrackingBundle\\spec\\": "spec/" }
-    },
-    "config": {
-        "bin-dir": "bin"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.3-dev"
+        "psr-4": {
+            "spec\\Kreta\\Bundle\\TimeTrackingBundle\\": "spec/"
         }
     }
 }

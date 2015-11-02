@@ -1,12 +1,13 @@
 <?php
 
 /*
- * This file belongs to Kreta.
- * The source code of application includes a LICENSE file
- * with all information about license.
+ * This file is part of the Kreta package.
  *
- * @author benatespina <benatespina@gmail.com>
- * @author gorkalaucirica <gorka.lauzirika@gmail.com>
+ * (c) Beñat Espiña <benatespina@gmail.com>
+ * (c) Gorka Laucirica <gorka.lauzirika@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace spec\Kreta\Bundle\TimeTrackingBundle\Controller;
@@ -17,14 +18,11 @@ use Kreta\Component\Issue\Model\Interfaces\IssueInterface;
 use Kreta\Component\TimeTracking\Model\Interfaces\TimeEntryInterface;
 use Kreta\Component\TimeTracking\Repository\TimeEntryRepository;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class TimeEntryControllerSpec.
- *
- * @package spec\Kreta\Bundle\TimeTrackingBundle\Controller
  */
 class TimeEntryControllerSpec extends ObjectBehavior
 {
@@ -50,8 +48,7 @@ class TimeEntryControllerSpec extends ObjectBehavior
         ParamFetcher $paramFetcher,
         IssueInterface $issue,
         TimeEntryInterface $timeEntry
-    )
-    {
+    ) {
         $container->get('kreta_time_tracking.repository.time_entry')
             ->shouldBeCalled()->willReturn($timeEntryRepository);
         $request->get('issue')->shouldBeCalled()->willReturn($issue);
@@ -79,8 +76,7 @@ class TimeEntryControllerSpec extends ObjectBehavior
         Handler $handler,
         TimeEntryInterface $timeEntry,
         Request $request
-    )
-    {
+    ) {
         $container->get('kreta_time_tracking.form_handler.time_entry')->shouldBeCalled()->willReturn($handler);
         $request->get('issue')->shouldBeCalled()->willReturn($issue);
         $handler->processForm($request, null, ['issue' => $issue])->shouldBeCalled()->willReturn($timeEntry);
@@ -95,8 +91,7 @@ class TimeEntryControllerSpec extends ObjectBehavior
         Handler $handler,
         TimeEntryInterface $timeEntry,
         Request $request
-    )
-    {
+    ) {
         $container->get('kreta_time_tracking.form_handler.time_entry')->shouldBeCalled()->willReturn($handler);
         $request->get('timeEntry')->shouldBeCalled()->willReturn($timeEntry);
         $request->get('issue')->shouldBeCalled()->willReturn($issue);
@@ -111,8 +106,7 @@ class TimeEntryControllerSpec extends ObjectBehavior
         Request $request,
         TimeEntryInterface $timeEntry,
         TimeEntryRepository $timeEntryRepository
-    )
-    {
+    ) {
         $container->get('kreta_time_tracking.repository.time_entry')
             ->shouldBeCalled()->willReturn($timeEntryRepository);
         $request->get('timeEntry')->shouldBeCalled()->willReturn($timeEntry);
