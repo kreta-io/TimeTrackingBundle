@@ -10,6 +10,6 @@ services:
         class: %kreta_time_entry.event_listener.time_entry_if_allowed_annotation.class%
         parent: kreta_core.event_listener.resource_if_allowed_annotation
         arguments:
-            - @kreta_time_tracking.repository.time_entry
+            - '@kreta_time_tracking.repository.time_entry'
         tags:
             - { name: kernel.event_listener, event: kernel.controller, method: onResourceIfAllowedAnnotationMethod }

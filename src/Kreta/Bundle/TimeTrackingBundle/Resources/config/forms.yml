@@ -10,14 +10,14 @@ services:
     kreta_time_tracking.form_handler.time_entry:
         parent: kreta_core.form_handler.handler
         arguments:
-            - kreta_time_tracking_time_entry_type
+            - Kreta\Component\TimeTracking\Form\Type\TimeEntryType
 
 #### TYPES ####
     kreta_time_tracking.form_type.time_entry:
         class: %kreta_time_tracking.form_type.time_entry.class%
         arguments:
             - %kreta_time_tracking.time_entry.class%
-            - @kreta_time_tracking.factory.time_entry
-            - @security.token_storage
+            - '@kreta_time_tracking.factory.time_entry'
+            - '@security.token_storage'
         tags:
-            - { name: form.type, alias: 'kreta_time_tracking_time_entry_type' }
+            - { name: form.type }
