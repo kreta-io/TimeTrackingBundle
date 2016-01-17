@@ -10,13 +10,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Kreta\Bundle\TimeTrackingBundle\DependencyInjection;
+namespace Kreta\Bundle\TimeTrackingBundle;
 
-use Kreta\Bundle\CoreBundle\DependencyInjection\Extension;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class KretaTimeTrackingExtension.
+ * Class KretaTimeTrackingBundle.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
-class KretaTimeTrackingExtension extends Extension
+class KretaTimeTrackingBundle extends Bundle
 {
 }

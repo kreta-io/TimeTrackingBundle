@@ -17,6 +17,9 @@ use Kreta\Bundle\CoreBundle\Behat\Context\DefaultContext;
 
 /**
  * Class TimeEntryContext.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class TimeEntryContext extends DefaultContext
 {

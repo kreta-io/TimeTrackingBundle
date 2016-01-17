@@ -17,6 +17,9 @@ use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 
 /**
  * Class TimeEntryIfAllowedAnnotationListener.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class TimeEntryIfAllowedAnnotationListener extends ResourceIfAllowedAnnotationListener
 {

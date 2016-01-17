@@ -16,6 +16,9 @@ use PhpSpec\ObjectBehavior;
 
 /**
  * Class ConfigurationSpec.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class ConfigurationSpec extends ObjectBehavior
 {

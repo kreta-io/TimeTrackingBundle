@@ -24,6 +24,9 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class TimeEntryController.
+ *
+ * @author Beñat Espiña <benatespina@gmail.com>
+ * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
 class TimeEntryController extends Controller
 {
