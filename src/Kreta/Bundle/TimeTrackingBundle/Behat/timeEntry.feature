@@ -569,7 +569,3 @@ Feature: Manage time entry
     Given I am authenticating with "access-token-0" token
     When I send a DELETE request to "/api/issues/0/time-entries/0"
     Then the response code should be 204
-    And the response should contain json:
-    """
-      {}
-    """
