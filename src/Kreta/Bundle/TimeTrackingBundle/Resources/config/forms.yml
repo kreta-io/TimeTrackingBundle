@@ -14,9 +14,9 @@ services:
 
 #### TYPES ####
     kreta_time_tracking.form_type.time_entry:
-        class: %kreta_time_tracking.form_type.time_entry.class%
+        class: '%kreta_time_tracking.form_type.time_entry.class%'
         arguments:
-            - %kreta_time_tracking.time_entry.class%
+            - '%kreta_time_tracking.time_entry.class%'
             - '@kreta_time_tracking.factory.time_entry'
             - '@security.token_storage'
         tags:

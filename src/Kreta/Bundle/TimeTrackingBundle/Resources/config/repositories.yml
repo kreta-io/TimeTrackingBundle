@@ -7,9 +7,9 @@
 
 services:
     kreta_time_tracking.repository.time_entry:
-        class: %kreta_time_tracking.repository_time_entry.class%
+        class: '%kreta_time_tracking.repository_time_entry.class%'
         factory:
             - '@doctrine.orm.entity_manager'
             - getRepository
         arguments:
-            - %kreta_time_tracking.time_entry.class%
+            - '%kreta_time_tracking.time_entry.class%'

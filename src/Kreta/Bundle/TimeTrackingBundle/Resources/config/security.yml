@@ -7,7 +7,7 @@
 
 services:
     kreta_time_tracking.voter.time_entry:
-        class: %kreta_time_tracking.security_time_entry_voter.class%
+        class: '%kreta_time_tracking.security_time_entry_voter.class%'
         public: false
         tags:
            - { name: security.voter }

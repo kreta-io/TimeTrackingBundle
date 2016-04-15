@@ -7,5 +7,6 @@
 
 services:
     kreta_time_tracking.factory.time_entry:
-        class: %kreta_time_tracking.factory_time_entry.class%
-        arguments: [%kreta_time_tracking.time_entry.class%]
+        class: '%kreta_time_tracking.factory_time_entry.class%'
+        arguments:
+            - '%kreta_time_tracking.time_entry.class%'
